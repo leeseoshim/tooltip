@@ -1,0 +1,48 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 15px;
+}
+
+img {
+  width: inherit;
+}
+
+.icon span {
+  position: absolute;
+  width: inherit;
+  text-align: center;
+  background-color: #383838;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.icon span:after {
+  content: "";
+  position: absolute;
+  background-color: #383838;
+  width: 10px;
+  height: 10px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.icon:hover span {
+  opacity: 1;
+  visibility: visible;
+}
